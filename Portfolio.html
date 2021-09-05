@@ -1,0 +1,121 @@
+<!--User Story #1: My portfolio should have a welcome section with an id of welcome-section.
+
+User Story #2: The welcome section should have an h1 element that contains text.
+
+User Story #3: My portfolio should have a projects section with an id of projects.
+
+User Story #4: The projects section should contain at least one element with a class of project-tile to hold a project.
+
+User Story #5: The projects section should contain at least one link to a project.
+
+User Story #6: My portfolio should have a navbar with an id of navbar.
+
+User Story #7: The navbar should contain at least one link that I can click on to navigate to different sections of the page.
+
+User Story #8: My portfolio should have a link with an id of profile-link, which opens my GitHub or FCC profile in a new tab.
+
+User Story #9: My portfolio should have at least one media query.
+
+User Story #10: The height of the welcome section should be equal to the height of the viewport.
+
+User Story #11: The navbar should always be at the top of the viewport.-->
+
+<style>
+body{overflow-x: hidden; background:rgb(6, 20, 102); margin: 0;}
+#welcome-section{ height: 100vh; width:100vw; background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVV6LprLJg9_hH3IN7UYh54ofnnzq1pWLIww&usqp=CAU"); background-size: cover; color: rgb(250, 250, 250);}
+
+.curtain{ background-color: rgba(33,40,82, .7);width: 100vw; height: 100vh;display:flex;align-items: center; justify-content: center; text-align: center; line-height: 40px;}
+
+#projects{display:grid;
+grid-template-columns:1fr 1fr 1fr; 
+grid-gap: 40px;
+margin-left:20px;
+margin-right: 20px;
+padding-top: 75px;
+padding-bottom: 75px;
+}
+
+nav{display: flex; flex-direction: row; height: 40px; position: fixed; width: 100vw; margin-top: 0px; background-color: rgb(6, 20, 102); color: white; padding: 20px; justify-content: space-between; align-items: center;}
+
+.nav-head{justify-content: flex-start;flex-grow: 2;}
+.nav-items{display:flex; flex-direction:row;flex-grow: 1; justify-content:space-evenly; text-align: center;}
+h3{padding-left: 10px; }
+
+.project-tile{display:flex;flex-direction: column; border-color:rgba(6, 20, 102, 0.7) ; border-width: 3px; border-radius: 3px; background-color:white; text-align: center; padding: 10px;}
+
+.project-tile:hover{
+    animation-name: tile;
+    animation-duration: 2s;
+    position: relative;
+    animation-fill-mode: forwards;
+}
+
+@media (max-width:1000px){
+
+    body{overflow-x: scroll; background:rgb(6, 20, 102);}
+    #welcome-section{ height: 100vh; width:100vw; background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVV6LprLJg9_hH3IN7UYh54ofnnzq1pWLIww&usqp=CAU"); background-size:100vw; color: rgb(250, 250, 250);}
+    nav{display: flex; flex-direction: row; height: 40px; position: fixed; width: 100%; margin-top: 0px; background-color: rgb(6, 20, 102); color: white; padding: 20px; justify-content: space-between; align-items: center;}
+}
+    
+
+@keyframes tile{
+    0%{
+        top:0px
+    }
+    100%{
+        top:-20px;
+        transform: scale(1.1);
+    }
+}
+
+img{width:100%; height: 100%;}
+
+.contact{display: flex; justify-content: space-between;}
+a, u{text-decoration: none;}
+
+</style>
+
+<nav>
+    <div class="nav-head">
+        <h1>Hey, Spidey</h1>
+    </div>
+    <div class="nav-items">
+        <h3>Welcome</h3>
+        <h3>Projects</h3>
+        <h3>Contact</h3>
+    </div>
+
+
+</nav>
+<div id="welcome-section">
+    <div class="curtain">
+        <h1>Hey there, I'm Spider Man. <br>This is my portfolio.</h1>
+    </div>
+</div>
+<div>
+    <h1>My Projects</h1>
+</div>
+<div id="projects">
+
+    <div class="project-tile"> 
+        <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg">
+        <h2>Project One</h2>
+    </div>
+    
+    <div class="project-tile"> 
+            <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg">
+            <h2>Project One</h2>
+    </div>
+    
+    <a href="https://notesformsc.org/html-projects-personal-portfolio/"><div class="project-tile"> 
+        <img src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg">
+        <h2>Project One</h2>
+    </div>  </a>
+    
+</div>
+<div class="contact">
+
+</div>
+<footer>
+    
+</footer>
